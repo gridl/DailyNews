@@ -38,7 +38,7 @@ def get_news():
 
 
 def send_mail():
-    server = smtplib.SMTP('smtp.mail.yahoo.com', 587)
+    server = smtplib.SMTP('smtp.gmail.com', 587)
     server.ehlo()
     server.starttls()
     server.login(send, key)

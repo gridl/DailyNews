@@ -8,7 +8,7 @@ from email.mime.multipart import MIMEMultipart
 from config import key, send, recs, wukey
 
 logger = colorlog.getLogger()
-cities = ['Beaverton','Portland']
+cities = ['Beaverton']
 alertcities = []
 posts = []
 
@@ -61,7 +61,7 @@ def get_weather():
 
 
 def send_mail():
-    server = smtplib.SMTP('smtp.mail.yahoo.com', 587)
+    server = smtplib.SMTP('smtp.gmail.com', 587)
     server.ehlo()
     server.starttls()
     server.login(send, key)
